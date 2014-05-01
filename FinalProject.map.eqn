@@ -1,0 +1,202 @@
+-- Copyright (C) 1991-2012 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--C1_Q[1] is UpDownCount:StoreQ|Q[1]
+C1_Q[1] = DFFEAS(C1L7, Clock,  ,  ,  ,  ,  ,  ,  );
+
+
+--C1_Q[2] is UpDownCount:StoreQ|Q[2]
+C1_Q[2] = DFFEAS(C1L10, Clock,  ,  ,  ,  ,  ,  ,  );
+
+
+--C1_Q[3] is UpDownCount:StoreQ|Q[3]
+C1_Q[3] = DFFEAS(C1L13, Clock,  ,  ,  ,  ,  ,  ,  );
+
+
+--C1_Q[4] is UpDownCount:StoreQ|Q[4]
+C1_Q[4] = DFFEAS(C1L16, Clock,  ,  ,  ,  ,  ,  ,  );
+
+
+--C1L6 is UpDownCount:StoreQ|Q[1]~5
+C1L6 = CARRY(C1_Q[0]);
+
+
+--C1L7 is UpDownCount:StoreQ|Q[1]~6
+C1L7 = (C1_Q[1] & ((up_down & (!C1L6)) # (!up_down & (C1L6 & VCC)))) # (!C1_Q[1] & ((up_down & ((C1L6) # (GND))) # (!up_down & (!C1L6))));
+
+--C1L8 is UpDownCount:StoreQ|Q[1]~7
+C1L8 = CARRY((C1_Q[1] & (up_down & !C1L6)) # (!C1_Q[1] & ((up_down) # (!C1L6))));
+
+
+--C1L10 is UpDownCount:StoreQ|Q[2]~8
+C1L10 = ((C1_Q[2] $ (up_down $ (C1L8)))) # (GND);
+
+--C1L11 is UpDownCount:StoreQ|Q[2]~9
+C1L11 = CARRY((C1_Q[2] & ((!C1L8) # (!up_down))) # (!C1_Q[2] & (!up_down & !C1L8)));
+
+
+--C1L13 is UpDownCount:StoreQ|Q[3]~10
+C1L13 = (C1_Q[3] & ((up_down & (!C1L11)) # (!up_down & (C1L11 & VCC)))) # (!C1_Q[3] & ((up_down & ((C1L11) # (GND))) # (!up_down & (!C1L11))));
+
+--C1L14 is UpDownCount:StoreQ|Q[3]~11
+C1L14 = CARRY((C1_Q[3] & (up_down & !C1L11)) # (!C1_Q[3] & ((up_down) # (!C1L11))));
+
+
+--C1L16 is UpDownCount:StoreQ|Q[4]~12
+C1L16 = C1_Q[4] $ (up_down $ (C1L14));
+
+
+--Q[0] is Q[0]
+Q[0] = OUTPUT(C1_Q[0]);
+
+
+--Q[1] is Q[1]
+Q[1] = OUTPUT(C1_Q[1]);
+
+
+--Q[2] is Q[2]
+Q[2] = OUTPUT(C1_Q[2]);
+
+
+--Q[3] is Q[3]
+Q[3] = OUTPUT(C1_Q[3]);
+
+
+--Q[4] is Q[4]
+Q[4] = OUTPUT(C1_Q[4]);
+
+
+--display[0] is display[0]
+display[0] = OUTPUT(B1L20);
+
+
+--display[1] is display[1]
+display[1] = OUTPUT(B1L17);
+
+
+--display[2] is display[2]
+display[2] = OUTPUT(B1L15);
+
+
+--display[3] is display[3]
+display[3] = OUTPUT(B1L12);
+
+
+--display[4] is display[4]
+display[4] = OUTPUT(B1L8);
+
+
+--display[5] is display[5]
+display[5] = OUTPUT(B1L5);
+
+
+--display[6] is display[6]
+display[6] = OUTPUT(B1L2);
+
+
+--C1_Q[0] is UpDownCount:StoreQ|Q[0]
+C1_Q[0] = DFFEAS(C1L3, Clock,  ,  ,  ,  ,  ,  ,  );
+
+
+--B1L18 is storageChar:HexDisplay|WideOr6~0
+B1L18 = (C1_Q[1] & (!C1_Q[2] & (C1_Q[0] $ (C1_Q[3])))) # (!C1_Q[1] & (!C1_Q[3] & ((C1_Q[0]) # (C1_Q[2]))));
+
+
+--B1L19 is storageChar:HexDisplay|WideOr6~1
+B1L19 = (C1_Q[0] & (C1_Q[3] & ((!C1_Q[2]) # (!C1_Q[1])))) # (!C1_Q[0] & (C1_Q[3] $ (((C1_Q[1] & !C1_Q[2])))));
+
+
+--B1L20 is storageChar:HexDisplay|WideOr6~2
+B1L20 = (C1_Q[4] & (B1L18)) # (!C1_Q[4] & ((B1L19)));
+
+
+--B1L16 is storageChar:HexDisplay|WideOr5~0
+B1L16 = (C1_Q[2] & (((!C1_Q[0] & !C1_Q[1])))) # (!C1_Q[2] & ((C1_Q[4] & (C1_Q[0])) # (!C1_Q[4] & ((!C1_Q[1])))));
+
+
+--B1L17 is storageChar:HexDisplay|WideOr5~1
+B1L17 = (C1_Q[3] & (((B1L16)))) # (!C1_Q[3] & (C1_Q[0] & (!C1_Q[2] & !B1L16)));
+
+
+--B1L13 is storageChar:HexDisplay|WideOr4~0
+B1L13 = (C1_Q[1] & (!C1_Q[0] & (C1_Q[2] & !C1_Q[3]))) # (!C1_Q[1] & (((!C1_Q[2] & C1_Q[3]))));
+
+
+--B1L14 is storageChar:HexDisplay|WideOr4~1
+B1L14 = (C1_Q[0] & (C1_Q[1] $ ((!C1_Q[2])))) # (!C1_Q[0] & ((C1_Q[2] & ((!C1_Q[3]))) # (!C1_Q[2] & (C1_Q[1] & C1_Q[3]))));
+
+
+--B1L15 is storageChar:HexDisplay|WideOr4~2
+B1L15 = (C1_Q[4] & ((!B1L14))) # (!C1_Q[4] & (B1L13));
+
+
+--B1L9 is storageChar:HexDisplay|WideOr3~0
+B1L9 = (C1_Q[2] & ((C1_Q[1] $ (!C1_Q[3])) # (!C1_Q[0]))) # (!C1_Q[2] & ((C1_Q[1] & ((C1_Q[0]) # (!C1_Q[3]))) # (!C1_Q[1] & ((C1_Q[3])))));
+
+
+--B1L10 is storageChar:HexDisplay|WideOr3~1
+B1L10 = (C1_Q[0] & (((!C1_Q[2])))) # (!C1_Q[0] & ((C1_Q[1] & ((C1_Q[2]) # (!C1_Q[3]))) # (!C1_Q[1] & (C1_Q[2] & !C1_Q[3]))));
+
+
+--B1L11 is storageChar:HexDisplay|WideOr3~2
+B1L11 = (C1_Q[4] & (B1L9)) # (!C1_Q[4] & ((B1L10)));
+
+
+--B1L6 is storageChar:HexDisplay|WideOr2~0
+B1L6 = (C1_Q[1] & ((C1_Q[4] & (!C1_Q[2])) # (!C1_Q[4] & ((C1_Q[3]))))) # (!C1_Q[1] & ((C1_Q[2] & ((!C1_Q[3]))) # (!C1_Q[2] & (C1_Q[4]))));
+
+
+--B1L7 is storageChar:HexDisplay|WideOr2~1
+B1L7 = (C1_Q[4] & (C1_Q[1] & ((C1_Q[3])))) # (!C1_Q[4] & (!C1_Q[3] & (C1_Q[1] $ (C1_Q[2]))));
+
+
+--B1L8 is storageChar:HexDisplay|WideOr2~2
+B1L8 = (C1_Q[0] & (B1L6)) # (!C1_Q[0] & ((B1L7)));
+
+
+--B1L3 is storageChar:HexDisplay|WideOr1~0
+B1L3 = (C1_Q[1] & ((C1_Q[2] & ((C1_Q[3]))) # (!C1_Q[2] & (!C1_Q[0])))) # (!C1_Q[1] & (C1_Q[0] & (!C1_Q[2] & !C1_Q[3])));
+
+
+--B1L4 is storageChar:HexDisplay|WideOr1~1
+B1L4 = (C1_Q[0] & (C1_Q[3] $ (((C1_Q[2]) # (!C1_Q[1]))))) # (!C1_Q[0] & (C1_Q[1] $ ((C1_Q[2]))));
+
+
+--B1L5 is storageChar:HexDisplay|WideOr1~2
+B1L5 = (C1_Q[4] & (B1L3)) # (!C1_Q[4] & ((B1L4)));
+
+
+--Clock is Clock
+Clock = INPUT();
+
+
+--up_down is up_down
+up_down = INPUT();
+
+
+--B1L1 is storageChar:HexDisplay|WideOr0~0
+B1L1 = (C1_Q[0] & ((C1_Q[1] & ((!C1_Q[3]))) # (!C1_Q[1] & (C1_Q[4])))) # (!C1_Q[0] & (C1_Q[3] & ((C1_Q[4]) # (!C1_Q[1]))));
+
+
+--B1L2 is storageChar:HexDisplay|WideOr0~1
+B1L2 = (C1_Q[0] & ((C1_Q[2] & ((B1L1))) # (!C1_Q[2] & (!C1_Q[4])))) # (!C1_Q[0] & ((B1L1 & ((!C1_Q[2]))) # (!B1L1 & (C1_Q[4] & C1_Q[2]))));
+
+
+--C1L3 is UpDownCount:StoreQ|Q[0]~14
+C1L3 = !C1_Q[0];
+
+
+--B1L12 is storageChar:HexDisplay|WideOr3~2_wirecell
+B1L12 = !B1L11;
+
+

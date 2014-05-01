@@ -1,0 +1,12 @@
+module storageFinal(Clock,up_down,Q,display);
+	input Clock,up_down;
+	
+	output wire [4:0]Q;
+	output[6:0]display;
+	
+	UpDownCount StoreQ(Clock,up_down,Q);
+	storageChar HexDisplay(Q, display);
+	
+	
+endmodule 
+	

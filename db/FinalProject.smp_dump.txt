@@ -1,0 +1,13 @@
+
+State Machine - |storageFinal|statemachineforpigs:biobvosf|y
+Name y.WI y.LO y.Z y.G y.F y.E y.D y.C y.B y.A 
+y.A 0 0 0 0 0 0 0 0 0 0 
+y.B 0 0 0 0 0 0 0 0 1 1 
+y.C 0 0 0 0 0 0 0 1 0 1 
+y.D 0 0 0 0 0 0 1 0 0 1 
+y.E 0 0 0 0 0 1 0 0 0 1 
+y.F 0 0 0 0 1 0 0 0 0 1 
+y.G 0 0 0 1 0 0 0 0 0 1 
+y.Z 0 0 1 0 0 0 0 0 0 1 
+y.LO 0 1 0 0 0 0 0 0 0 1 
+y.WI 1 0 0 0 0 0 0 0 0 1 

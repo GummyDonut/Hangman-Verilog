@@ -1,0 +1,64 @@
+module storageunit(Q, confirm, clock)
+
+	input Q, confirm, clock;
+	
+	reg [0:4] slotA;
+	reg [0:4] slotB;
+	reg [0:4] slotC;
+	reg [0:4] slotD;
+	reg [0:4] slotE;
+	reg [0:4] slotF;
+	reg [0:4] slotG;
+	
+	reg [3:1] y,Y;
+	
+	reg 3'b000 counter;
+	
+	//output 
+	parameter A= 3'b000, B = 3'b001, C=3'b010, D=3'b011, E= 3'b100, F= 3'b101
+	
+	always@(clock, confirm)		
+			case(y)
+				A: if(confirm&(counter==3'b000))
+					begin
+						counter = 3'b001;
+						assign slotA = Q;
+					end
+					
+				B: if(confirm&(counter==3'b001))
+					begin
+						counter = 3'b010;
+						assign slotB = Q;
+					end
+				
+				C:	if(confirm&(counter==3'b010))
+					begin
+						counter = 3'b011;
+						assign slotC = Q;
+					end
+				
+				D: if(confirm&(counter==3'b011))
+					begin
+						counter = 3'b100;
+						assign slotD = Q;
+					end
+				
+				E: if(confirm&(counter==3'b100))
+					begin
+						counter = 3'b101;
+						assign slotE = Q;
+					end
+				
+				F:	if(confirm&(counter==3'b101))
+					begin
+						counter = 3'b110;
+						assign slotF = Q;
+					end
+					
+			endcase
+					
+			
+			
+			
+			
+endmodule

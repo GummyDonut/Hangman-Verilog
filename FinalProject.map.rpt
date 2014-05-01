@@ -1,0 +1,431 @@
+Analysis & Synthesis report for FinalProject
+Fri Nov 29 21:03:43 2013
+Quartus II 64-Bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |storageFinal|statemachineforpigs:biobvosf|y
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: statemachineforpigs:biobvosf
+ 14. Port Connectivity Checks: "statemachineforpigs:biobvosf"
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+ 17. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                        ;
++------------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Nov 29 21:03:43 2013          ;
+; Quartus II 64-Bit Version          ; 12.1 Build 243 01/31/2013 SP 1 SJ Full Version ;
+; Revision Name                      ; FinalProject                                   ;
+; Top-level Entity Name              ; storageFinal                                   ;
+; Family                             ; Cyclone II                                     ;
+; Total logic elements               ; 312                                            ;
+;     Total combinational functions  ; 305                                            ;
+;     Dedicated logic registers      ; 89                                             ;
+; Total registers                    ; 89                                             ;
+; Total pins                         ; 61                                             ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
++------------------------------------+------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; storageFinal       ; FinalProject       ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                       ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                         ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
+; storageChar.v                    ; yes             ; User Verilog HDL File  ; C:/Users/spectome/Desktop/2DA4/storageChar.v         ;         ;
+; UpDownCount.v                    ; yes             ; User Verilog HDL File  ; C:/Users/spectome/Desktop/2DA4/UpDownCount.v         ;         ;
+; storageFinal.v                   ; yes             ; User Verilog HDL File  ; C:/Users/spectome/Desktop/2DA4/storageFinal.v        ;         ;
+; statemachineforpigs.v            ; yes             ; User Verilog HDL File  ; C:/Users/spectome/Desktop/2DA4/statemachineforpigs.v ;         ;
+; hexdisp.v                        ; yes             ; User Verilog HDL File  ; C:/Users/spectome/Desktop/2DA4/hexdisp.v             ;         ;
+; losedisp.v                       ; yes             ; User Verilog HDL File  ; C:/Users/spectome/Desktop/2DA4/losedisp.v            ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 312   ;
+;                                             ;       ;
+; Total combinational functions               ; 305   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 221   ;
+;     -- 3 input functions                    ; 35    ;
+;     -- <=2 input functions                  ; 49    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 271   ;
+;     -- arithmetic mode                      ; 34    ;
+;                                             ;       ;
+; Total registers                             ; 89    ;
+;     -- Dedicated logic registers            ; 89    ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 61    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out                             ; 84    ;
+; Total fan-out                               ; 1458  ;
+; Average fan-out                             ; 3.20  ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                       ;
++-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------+
+; Compilation Hierarchy Node        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Library Name ;
++-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------+
+; |storageFinal                     ; 305 (0)           ; 89 (0)       ; 0           ; 0            ; 0       ; 0         ; 61   ; 0            ; |storageFinal                              ;              ;
+;    |UpDownCount:StoreQ|           ; 6 (6)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |storageFinal|UpDownCount:StoreQ           ;              ;
+;    |hexdisp:B|                    ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |storageFinal|hexdisp:B                    ;              ;
+;    |hexdisp:C|                    ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |storageFinal|hexdisp:C                    ;              ;
+;    |hexdisp:D|                    ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |storageFinal|hexdisp:D                    ;              ;
+;    |hexdisp:E|                    ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |storageFinal|hexdisp:E                    ;              ;
+;    |hexdisp:F|                    ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |storageFinal|hexdisp:F                    ;              ;
+;    |hexdisp:h|                    ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |storageFinal|hexdisp:h                    ;              ;
+;    |losedisp:screwyou|            ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |storageFinal|losedisp:screwyou            ;              ;
+;    |statemachineforpigs:biobvosf| ; 143 (143)         ; 84 (84)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |storageFinal|statemachineforpigs:biobvosf ;              ;
+;    |storageChar:HexDisplay|       ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |storageFinal|storageChar:HexDisplay       ;              ;
++-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------+
+; State Machine - |storageFinal|statemachineforpigs:biobvosf|y       ;
++------+------+------+-----+-----+-----+-----+-----+-----+-----+-----+
+; Name ; y.WI ; y.LO ; y.Z ; y.G ; y.F ; y.E ; y.D ; y.C ; y.B ; y.A ;
++------+------+------+-----+-----+-----+-----+-----+-----+-----+-----+
+; y.A  ; 0    ; 0    ; 0   ; 0   ; 0   ; 0   ; 0   ; 0   ; 0   ; 0   ;
+; y.B  ; 0    ; 0    ; 0   ; 0   ; 0   ; 0   ; 0   ; 0   ; 1   ; 1   ;
+; y.C  ; 0    ; 0    ; 0   ; 0   ; 0   ; 0   ; 0   ; 1   ; 0   ; 1   ;
+; y.D  ; 0    ; 0    ; 0   ; 0   ; 0   ; 0   ; 1   ; 0   ; 0   ; 1   ;
+; y.E  ; 0    ; 0    ; 0   ; 0   ; 0   ; 1   ; 0   ; 0   ; 0   ; 1   ;
+; y.F  ; 0    ; 0    ; 0   ; 0   ; 1   ; 0   ; 0   ; 0   ; 0   ; 1   ;
+; y.G  ; 0    ; 0    ; 0   ; 1   ; 0   ; 0   ; 0   ; 0   ; 0   ; 1   ;
+; y.Z  ; 0    ; 0    ; 1   ; 0   ; 0   ; 0   ; 0   ; 0   ; 0   ; 1   ;
+; y.LO ; 0    ; 1    ; 0   ; 0   ; 0   ; 0   ; 0   ; 0   ; 0   ; 1   ;
+; y.WI ; 1    ; 0    ; 0   ; 0   ; 0   ; 0   ; 0   ; 0   ; 0   ; 1   ;
++------+------+------+-----+-----+-----+-----+-----+-----+-----+-----+
+
+
++------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                  ;
++----------------------------------------------------+------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal    ; Free of Timing Hazards ;
++----------------------------------------------------+------------------------+------------------------+
+; losedisp:screwyou|led1                             ; losedisp:screwyou|Mux1 ; yes                    ;
+; losedisp:screwyou|led2                             ; losedisp:screwyou|Mux1 ; yes                    ;
+; losedisp:screwyou|led3                             ; losedisp:screwyou|Mux1 ; yes                    ;
+; losedisp:screwyou|led4                             ; losedisp:screwyou|Mux1 ; yes                    ;
+; losedisp:screwyou|led5                             ; losedisp:screwyou|Mux1 ; yes                    ;
+; losedisp:screwyou|led6                             ; losedisp:screwyou|Mux1 ; yes                    ;
+; Number of user-specified and inferred latches = 6  ;                        ;                        ;
++----------------------------------------------------+------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; statemachineforpigs:biobvosf|y~14     ; Lost fanout        ;
+; statemachineforpigs:biobvosf|y~15     ; Lost fanout        ;
+; statemachineforpigs:biobvosf|y~16     ; Lost fanout        ;
+; statemachineforpigs:biobvosf|y~17     ; Lost fanout        ;
+; Total Number of Removed Registers = 4 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 89    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 78    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 63    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |storageFinal|statemachineforpigs:biobvosf|c1       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |storageFinal|statemachineforpigs:biobvosf|slotD[0] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |storageFinal|statemachineforpigs:biobvosf|slotC[3] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |storageFinal|statemachineforpigs:biobvosf|slotD[1] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |storageFinal|statemachineforpigs:biobvosf|slotE[0] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |storageFinal|statemachineforpigs:biobvosf|slotF[0] ;
+; 8:1                ; 6 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; Yes        ; |storageFinal|statemachineforpigs:biobvosf|b        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: statemachineforpigs:biobvosf ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; A              ; 0000  ; Unsigned Binary                                  ;
+; B              ; 0001  ; Unsigned Binary                                  ;
+; C              ; 0010  ; Unsigned Binary                                  ;
+; D              ; 0011  ; Unsigned Binary                                  ;
+; E              ; 0100  ; Unsigned Binary                                  ;
+; F              ; 0101  ; Unsigned Binary                                  ;
+; G              ; 0110  ; Unsigned Binary                                  ;
+; H              ; 0111  ; Unsigned Binary                                  ;
+; Z              ; 1100  ; Unsigned Binary                                  ;
+; LO             ; 1101  ; Unsigned Binary                                  ;
+; WI             ; 1110  ; Unsigned Binary                                  ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "statemachineforpigs:biobvosf"                                                                                          ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
+; W    ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (3 bits) it drives; bit(s) "W[31..3]" have no fanouts ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:03     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Fri Nov 29 21:03:28 2013
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FinalProject -c FinalProject
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file storagechar.v
+    Info (12023): Found entity 1: storageChar
+Warning (10238): Verilog Module Declaration warning at UpDownCount.v(1): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "UpDownCount"
+Info (12021): Found 1 design units, including 1 entities, in source file updowncount.v
+    Info (12023): Found entity 1: UpDownCount
+Info (12021): Found 1 design units, including 1 entities, in source file storagefinal.v
+    Info (12023): Found entity 1: storageFinal
+Info (12021): Found 1 design units, including 1 entities, in source file statemachineforpigs.v
+    Info (12023): Found entity 1: statemachineforpigs
+Info (12021): Found 1 design units, including 1 entities, in source file testdisplay.v
+    Info (12023): Found entity 1: testdisplay
+Info (12021): Found 1 design units, including 1 entities, in source file displaywinlose.v
+    Info (12023): Found entity 1: displayWinLose
+Info (12021): Found 1 design units, including 1 entities, in source file hexdisp.v
+    Info (12023): Found entity 1: hexdisp
+Info (12021): Found 1 design units, including 1 entities, in source file losedisp.v
+    Info (12023): Found entity 1: losedisp
+Info (12127): Elaborating entity "storageFinal" for the top level hierarchy
+Info (12128): Elaborating entity "UpDownCount" for hierarchy "UpDownCount:StoreQ"
+Warning (10230): Verilog HDL assignment warning at UpDownCount.v(12): truncated value with size 32 to match size of target (5)
+Info (12128): Elaborating entity "storageChar" for hierarchy "storageChar:HexDisplay"
+Info (12128): Elaborating entity "statemachineforpigs" for hierarchy "statemachineforpigs:biobvosf"
+Info (12128): Elaborating entity "hexdisp" for hierarchy "hexdisp:h"
+Warning (10235): Verilog HDL Always Construct warning at hexdisp.v(7): variable "letter" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Info (12128): Elaborating entity "losedisp" for hierarchy "losedisp:screwyou"
+Warning (10270): Verilog HDL Case Statement warning at losedisp.v(5): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at losedisp.v(4): inferring latch(es) for variable "led6", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at losedisp.v(4): inferring latch(es) for variable "led5", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at losedisp.v(4): inferring latch(es) for variable "led4", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at losedisp.v(4): inferring latch(es) for variable "led3", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at losedisp.v(4): inferring latch(es) for variable "led2", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at losedisp.v(4): inferring latch(es) for variable "led1", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "led1" at losedisp.v(4)
+Info (10041): Inferred latch for "led2" at losedisp.v(4)
+Info (10041): Inferred latch for "led3" at losedisp.v(4)
+Info (10041): Inferred latch for "led4" at losedisp.v(4)
+Info (10041): Inferred latch for "led5" at losedisp.v(4)
+Info (10041): Inferred latch for "led6" at losedisp.v(4)
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13012): Latch losedisp:screwyou|led1 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal statemachineforpigs:biobvosf|W[2]
+Warning (13012): Latch losedisp:screwyou|led2 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal statemachineforpigs:biobvosf|W[2]
+Warning (13012): Latch losedisp:screwyou|led3 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal statemachineforpigs:biobvosf|W[2]
+Warning (13012): Latch losedisp:screwyou|led4 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal statemachineforpigs:biobvosf|W[2]
+Warning (13012): Latch losedisp:screwyou|led5 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal statemachineforpigs:biobvosf|W[2]
+Warning (13012): Latch losedisp:screwyou|led6 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal statemachineforpigs:biobvosf|W[2]
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "T" is stuck at GND
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/spectome/Desktop/2DA4/FinalProject.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 376 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 56 output pins
+    Info (21061): Implemented 315 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 441 megabytes
+    Info: Processing ended: Fri Nov 29 21:03:43 2013
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:06
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/spectome/Desktop/2DA4/FinalProject.map.smsg.
+
+

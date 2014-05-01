@@ -1,0 +1,216 @@
+Simulator report for FinalProject
+Wed Nov 20 23:01:05 2013
+Quartus II 32-bit Version 12.0 Build 178 05/31/2012 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 45 nodes     ;
+; Simulation Coverage         ;      35.42 % ;
+; Total Number of Transitions ; 72           ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C35F672C6 ;
++-----------------------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                        ;
++--------------------------------------------------------------------------------------------+----------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                      ; Default Value ;
++--------------------------------------------------------------------------------------------+----------------------------------------------+---------------+
+; Simulation mode                                                                            ; Timing                                       ; Timing        ;
+; Start time                                                                                 ; 0 ns                                         ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                          ;               ;
+; Vector input source                                                                        ; C:/Users/Seungwoo/Desktop/2DA4/whatever2.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                           ; On            ;
+; Check outputs                                                                              ; Off                                          ; Off           ;
+; Report simulation coverage                                                                 ; On                                           ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                           ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                           ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                           ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                          ; Off           ;
+; Detect glitches                                                                            ; Off                                          ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                          ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                          ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                          ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                          ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                           ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                   ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                          ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                          ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                         ; Auto          ;
++--------------------------------------------------------------------------------------------+----------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 32-bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      35.42 % ;
+; Total nodes checked                                 ; 45           ;
+; Total output ports checked                          ; 48           ;
+; Total output ports with complete 1/0-value coverage ; 17           ;
+; Total output ports with no 1/0-value coverage       ; 5            ;
+; Total output ports with no 1-value coverage         ; 10           ;
+; Total output ports with no 0-value coverage         ; 26           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                        ;
++------------------------------------------------+------------------------------------------------+------------------+
+; Node Name                                      ; Output Port Name                               ; Output Port Type ;
++------------------------------------------------+------------------------------------------------+------------------+
+; |storageFinal|UpDownCount:StoreQ|Q[1]~6        ; |storageFinal|UpDownCount:StoreQ|Q[1]~6        ; combout          ;
+; |storageFinal|UpDownCount:StoreQ|Q[2]~8        ; |storageFinal|UpDownCount:StoreQ|Q[2]~8        ; combout          ;
+; |storageFinal|UpDownCount:StoreQ|Q[3]~10       ; |storageFinal|UpDownCount:StoreQ|Q[3]~10       ; combout          ;
+; |storageFinal|UpDownCount:StoreQ|Q[4]~12       ; |storageFinal|UpDownCount:StoreQ|Q[4]~12       ; combout          ;
+; |storageFinal|storageChar:HexDisplay|WideOr6~1 ; |storageFinal|storageChar:HexDisplay|WideOr6~1 ; combout          ;
+; |storageFinal|storageChar:HexDisplay|WideOr5~1 ; |storageFinal|storageChar:HexDisplay|WideOr5~1 ; combout          ;
+; |storageFinal|storageChar:HexDisplay|WideOr4~2 ; |storageFinal|storageChar:HexDisplay|WideOr4~2 ; combout          ;
+; |storageFinal|storageChar:HexDisplay|WideOr3~1 ; |storageFinal|storageChar:HexDisplay|WideOr3~1 ; combout          ;
+; |storageFinal|storageChar:HexDisplay|WideOr2~0 ; |storageFinal|storageChar:HexDisplay|WideOr2~0 ; combout          ;
+; |storageFinal|storageChar:HexDisplay|WideOr2~2 ; |storageFinal|storageChar:HexDisplay|WideOr2~2 ; combout          ;
+; |storageFinal|storageChar:HexDisplay|WideOr1~1 ; |storageFinal|storageChar:HexDisplay|WideOr1~1 ; combout          ;
+; |storageFinal|storageChar:HexDisplay|WideOr0~0 ; |storageFinal|storageChar:HexDisplay|WideOr0~0 ; combout          ;
+; |storageFinal|storageChar:HexDisplay|WideOr0~1 ; |storageFinal|storageChar:HexDisplay|WideOr0~1 ; combout          ;
+; |storageFinal|display[1]                       ; |storageFinal|display[1]                       ; padio            ;
+; |storageFinal|display[2]                       ; |storageFinal|display[2]                       ; padio            ;
+; |storageFinal|display[4]                       ; |storageFinal|display[4]                       ; padio            ;
+; |storageFinal|display[6]                       ; |storageFinal|display[6]                       ; padio            ;
++------------------------------------------------+------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                           ;
++------------------------------------------------+------------------------------------------------+------------------+
+; Node Name                                      ; Output Port Name                               ; Output Port Type ;
++------------------------------------------------+------------------------------------------------+------------------+
+; |storageFinal|UpDownCount:StoreQ|Q[1]~6        ; |storageFinal|UpDownCount:StoreQ|Q[1]~7        ; cout             ;
+; |storageFinal|UpDownCount:StoreQ|Q[3]~10       ; |storageFinal|UpDownCount:StoreQ|Q[3]~11       ; cout             ;
+; |storageFinal|storageChar:HexDisplay|WideOr6~0 ; |storageFinal|storageChar:HexDisplay|WideOr6~0 ; combout          ;
+; |storageFinal|storageChar:HexDisplay|WideOr6~2 ; |storageFinal|storageChar:HexDisplay|WideOr6~2 ; combout          ;
+; |storageFinal|storageChar:HexDisplay|WideOr5~0 ; |storageFinal|storageChar:HexDisplay|WideOr5~0 ; combout          ;
+; |storageFinal|storageChar:HexDisplay|WideOr4~0 ; |storageFinal|storageChar:HexDisplay|WideOr4~0 ; combout          ;
+; |storageFinal|UpDownCount:StoreQ|Q[0]~14       ; |storageFinal|UpDownCount:StoreQ|Q[0]~14       ; combout          ;
+; |storageFinal|display[0]                       ; |storageFinal|display[0]                       ; padio            ;
+; |storageFinal|display[3]                       ; |storageFinal|display[3]                       ; padio            ;
+; |storageFinal|up_down                          ; |storageFinal|up_down~corein                   ; combout          ;
++------------------------------------------------+------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                           ;
++------------------------------------------------+------------------------------------------------+------------------+
+; Node Name                                      ; Output Port Name                               ; Output Port Type ;
++------------------------------------------------+------------------------------------------------+------------------+
+; |storageFinal|UpDownCount:StoreQ|Q[1]          ; |storageFinal|UpDownCount:StoreQ|Q[1]          ; regout           ;
+; |storageFinal|UpDownCount:StoreQ|Q[2]          ; |storageFinal|UpDownCount:StoreQ|Q[2]          ; regout           ;
+; |storageFinal|UpDownCount:StoreQ|Q[3]          ; |storageFinal|UpDownCount:StoreQ|Q[3]          ; regout           ;
+; |storageFinal|UpDownCount:StoreQ|Q[4]          ; |storageFinal|UpDownCount:StoreQ|Q[4]          ; regout           ;
+; |storageFinal|UpDownCount:StoreQ|Q[1]~5        ; |storageFinal|UpDownCount:StoreQ|Q[1]~5        ; cout             ;
+; |storageFinal|UpDownCount:StoreQ|Q[2]~8        ; |storageFinal|UpDownCount:StoreQ|Q[2]~9        ; cout             ;
+; |storageFinal|UpDownCount:StoreQ|Q[0]          ; |storageFinal|UpDownCount:StoreQ|Q[0]          ; regout           ;
+; |storageFinal|storageChar:HexDisplay|WideOr6~0 ; |storageFinal|storageChar:HexDisplay|WideOr6~0 ; combout          ;
+; |storageFinal|storageChar:HexDisplay|WideOr6~2 ; |storageFinal|storageChar:HexDisplay|WideOr6~2 ; combout          ;
+; |storageFinal|storageChar:HexDisplay|WideOr4~0 ; |storageFinal|storageChar:HexDisplay|WideOr4~0 ; combout          ;
+; |storageFinal|storageChar:HexDisplay|WideOr4~1 ; |storageFinal|storageChar:HexDisplay|WideOr4~1 ; combout          ;
+; |storageFinal|storageChar:HexDisplay|WideOr3~0 ; |storageFinal|storageChar:HexDisplay|WideOr3~0 ; combout          ;
+; |storageFinal|storageChar:HexDisplay|WideOr3~2 ; |storageFinal|storageChar:HexDisplay|WideOr3~2 ; combout          ;
+; |storageFinal|storageChar:HexDisplay|WideOr2~1 ; |storageFinal|storageChar:HexDisplay|WideOr2~1 ; combout          ;
+; |storageFinal|storageChar:HexDisplay|WideOr1~0 ; |storageFinal|storageChar:HexDisplay|WideOr1~0 ; combout          ;
+; |storageFinal|storageChar:HexDisplay|WideOr1~2 ; |storageFinal|storageChar:HexDisplay|WideOr1~2 ; combout          ;
+; |storageFinal|Q[0]                             ; |storageFinal|Q[0]                             ; padio            ;
+; |storageFinal|Q[1]                             ; |storageFinal|Q[1]                             ; padio            ;
+; |storageFinal|Q[2]                             ; |storageFinal|Q[2]                             ; padio            ;
+; |storageFinal|Q[3]                             ; |storageFinal|Q[3]                             ; padio            ;
+; |storageFinal|Q[4]                             ; |storageFinal|Q[4]                             ; padio            ;
+; |storageFinal|display[0]                       ; |storageFinal|display[0]                       ; padio            ;
+; |storageFinal|display[5]                       ; |storageFinal|display[5]                       ; padio            ;
+; |storageFinal|Clock                            ; |storageFinal|Clock~corein                     ; combout          ;
+; |storageFinal|up_down                          ; |storageFinal|up_down~corein                   ; combout          ;
+; |storageFinal|Clock~clkctrl                    ; |storageFinal|Clock~clkctrl                    ; outclk           ;
++------------------------------------------------+------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Simulator
+    Info: Version 12.0 Build 178 05/31/2012 SJ Web Edition
+    Info: Processing started: Wed Nov 20 23:01:04 2013
+Info: Command: quartus_sim --simulation_results_format=VWF FinalProject -c FinalProject
+Info (324025): Using vector source file "C:/Users/Seungwoo/Desktop/2DA4/whatever2.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      35.42 %
+Info (328052): Number of transitions in simulation is 72
+Info (324045): Vector file FinalProject.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 32-bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 260 megabytes
+    Info: Processing ended: Wed Nov 20 23:01:05 2013
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

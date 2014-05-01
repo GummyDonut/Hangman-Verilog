@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'clock'
+Slack : -3.694
+TNS   : -222.298
+
+Type  : Slow Model Setup 'statemachineforpigs:biobvosf|W[0]'
+Slack : -1.707
+TNS   : -8.691
+
+Type  : Slow Model Setup 'Clock'
+Slack : -0.729
+TNS   : -2.402
+
+Type  : Slow Model Hold 'clock'
+Slack : -2.796
+TNS   : -23.777
+
+Type  : Slow Model Hold 'statemachineforpigs:biobvosf|W[0]'
+Slack : -1.863
+TNS   : -4.324
+
+Type  : Slow Model Hold 'Clock'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clock'
+Slack : -1.222
+TNS   : -85.222
+
+Type  : Slow Model Minimum Pulse Width 'Clock'
+Slack : -1.222
+TNS   : -6.222
+
+Type  : Slow Model Minimum Pulse Width 'statemachineforpigs:biobvosf|W[0]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clock'
+Slack : -1.310
+TNS   : -67.128
+
+Type  : Fast Model Setup 'statemachineforpigs:biobvosf|W[0]'
+Slack : -0.158
+TNS   : -0.503
+
+Type  : Fast Model Setup 'Clock'
+Slack : 0.213
+TNS   : 0.000
+
+Type  : Fast Model Hold 'clock'
+Slack : -1.488
+TNS   : -19.700
+
+Type  : Fast Model Hold 'statemachineforpigs:biobvosf|W[0]'
+Slack : -1.117
+TNS   : -2.819
+
+Type  : Fast Model Hold 'Clock'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clock'
+Slack : -1.222
+TNS   : -85.222
+
+Type  : Fast Model Minimum Pulse Width 'Clock'
+Slack : -1.222
+TNS   : -6.222
+
+Type  : Fast Model Minimum Pulse Width 'statemachineforpigs:biobvosf|W[0]'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -1,0 +1,36 @@
+module hex7seg (enter,display);
+	input[4:0]enter;
+	output reg [0:6]display;
+	
+	always@(enter)
+		case(enter) //0,1,2,3,4,5,6 // note
+		0:display = 7'b1110111;
+		1:display = 7'b0011111;
+		2:display = 7'b1001110;
+		3:display = 7'b0111101;
+		4:display = 7'b1001111;
+		5:display = 7'b1000111;
+		6:display = 7'b1111011;
+		7:display = 7'b0010111; // note that each reg vector 0,1,etc corresponds to a light
+		8:display = 7'b0110000;
+		9:display = 7'b0111000;
+		10:display = 7'b1010111;
+		11:display = 7'b0001110;
+		12:display = 7'b1010100;
+		13:display = 7'b1110110;
+		14:display = 7'b1111110;
+		15:display = 7'b1100111;
+		16:display = 7'b1110011;
+		17:display = 7'b1000110;
+		18:display = 7'b1011011;
+		19:display = 7'b1101010;
+		20:display = 7'b0111110;
+		21:display = 7'b0101010;
+		22:display = 7'b0111111;
+		23:display = 7'b0110111;
+		24:display = 7'b0111011;
+		25:display = 7'b1101101;
+		default: display=7'bx;
+		endcase
+		
+endmodule

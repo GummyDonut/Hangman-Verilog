@@ -1,0 +1,17 @@
+Warning (10273): Verilog HDL warning at storageChar.v(39): extended using "x" or "z"
+Warning (10268): Verilog HDL information at UpDownCount.v(6): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at storageFinal.v(2): object "Clock" differs only in case from object "clock" in the same scope
+Info (10281): Verilog HDL Declaration information at storageFinal.v(6): object "b" differs only in case from object "B" in the same scope
+Info (10281): Verilog HDL Declaration information at storageFinal.v(6): object "c" differs only in case from object "C" in the same scope
+Info (10281): Verilog HDL Declaration information at storageFinal.v(6): object "d" differs only in case from object "D" in the same scope
+Info (10281): Verilog HDL Declaration information at storageFinal.v(6): object "e" differs only in case from object "E" in the same scope
+Info (10281): Verilog HDL Declaration information at storageFinal.v(6): object "f" differs only in case from object "F" in the same scope
+Warning (10268): Verilog HDL information at statemachineforpigs.v(26): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at statemachineforpigs.v(17): object "a" differs only in case from object "A" in the same scope
+Info (10281): Verilog HDL Declaration information at statemachineforpigs.v(17): object "b" differs only in case from object "B" in the same scope
+Info (10281): Verilog HDL Declaration information at statemachineforpigs.v(17): object "c" differs only in case from object "C" in the same scope
+Info (10281): Verilog HDL Declaration information at statemachineforpigs.v(17): object "d" differs only in case from object "D" in the same scope
+Info (10281): Verilog HDL Declaration information at statemachineforpigs.v(17): object "e" differs only in case from object "E" in the same scope
+Info (10281): Verilog HDL Declaration information at statemachineforpigs.v(17): object "f" differs only in case from object "F" in the same scope
+Warning (10273): Verilog HDL warning at testdisplay.v(43): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at hexdisp.v(43): extended using "x" or "z"
